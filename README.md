@@ -3,6 +3,8 @@ Source code and datasets related to the TemporalDedup approach for deduplication
 
 Included in this repository is an Eclipse Java project that includes the source code, external libraries, PSN and COVID-19 datasets, and pre-configured launchers for the TemporalDedup application.  This represents an implementation of the concepts put forward in the Journal of Information Processing & Management article under consideration, "TemporalDedup: Domain-Independent Deduplication of Redundant and Errant Temporal Data."  The core concepts are implemented and adherent to the algorithms and descriptions put forward in the manuscript.  Future iterations of development will refactor the code for efficiency, add functionality/capability/robustness, and resolve bugs and limitations discovered through the application to additional datasets.
 
+The datasets are zipped in the datasets subfolder.  To run the application, you will want to extract those zip files and copy the dataset and truth files to the input subfolder.  Included in each dataset zip file is README with more detail about the format and information of each dataset.
+
 -------------------
 Requirements/assumptions in the current revision (robustness updates planned for the future):
 
@@ -52,7 +54,7 @@ These inputs allow the user to request optional functionality to include post-ru
   -a will output an analysis file with each record prefixed by fields that may aid in analysis
 
 -------
-Usage examples:
+USAGE EXAMPLES:
 Below are example command line argument configurations.  Note that the main class is temporal.dedup.TemporalDedup.
   
 -d input\\psn_trophy_dataset_obfuscated.txt -t input\\psn_trophy_truth_data.txt -c Game ID -a -s .981
